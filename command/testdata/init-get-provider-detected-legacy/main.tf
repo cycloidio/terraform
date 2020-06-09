@@ -8,3 +8,7 @@ provider baz {}
 // This will try to install hashicrop/frob, fail, find no suggestions, and
 // result in an error
 provider frob {}
+
+module "some-baz-stuff" {
+  source = "./child"
+}

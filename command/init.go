@@ -607,6 +607,11 @@ func (c *InitCommand) getProviders(config *configs.Config, state *states.State, 
 	ctx := evts.OnContext(context.TODO())
 	selected, err := inst.EnsureProviderVersions(ctx, reqs, mode)
 	if err != nil {
+		// Build a map of provider address to list of modules using the provider
+		reqs, _ := config.ProviderRequirementsByModule()
+		providerModuleDirs := make(map[addrs.Provider][]string)
+		c.addProviderModuleDirs(providerModuleDirs, reqs)
+
 		// Try to look up any missing providers which may be redirected legacy
 		// providers. If we're successful, construct a "did you mean?" diag to
 		// suggest how to fix this. Otherwise, add a simple error diag
@@ -627,14 +632,40 @@ func (c *InitCommand) getProviders(config *configs.Config, state *states.State, 
 			}
 		}
 		if len(foundProviders) > 0 {
+			// Build list of provider suggestions, and track which source dirs
+			// are affected
 			var providerSuggestions string
+			moduleDirs := make(map[string]bool)
 			for missingProvider, foundProvider := range foundProviders {
 				providerSuggestions += fmt.Sprintf("  %s -> %s\n", missingProvider.ForDisplay(), foundProvider.ForDisplay())
+				for _, dir := range providerModuleDirs[missingProvider] {
+					moduleDirs[dir] = true
+				}
+			}
+
+			// Create sorted list of 0.13upgrade commands with the affected
+			// source dirs
+			var upgradeCommands []string
+			for dir := range moduleDirs {
+				upgradeCommands = append(upgradeCommands, fmt.Sprintf("terraform 0.13upgrade %s", dir))
+			}
+			sort.Strings(upgradeCommands)
+			command := "command"
+			if len(upgradeCommands) > 1 {
+				command = "commands"
+			}
+
+			// Display detailed diagnostic results, including the missing and
+			// found provider FQNs, and the suggested series of upgrade
+			// commands to fix this
+			detail := fmt.Sprintf("Could not find required providers, but found possible alternatives:\n\n%s\nIf these suggestions look correct, upgrade your configuration with the following %s:", providerSuggestions, command)
+			for _, upgradeCommand := range upgradeCommands {
+				detail += "\n    " + upgradeCommand
 			}
 			diags = diags.Append(tfdiags.Sourceless(
 				tfdiags.Error,
 				"Failed to install providers",
-				fmt.Sprintf("Could not find required providers, but found possible alternatives:\n\n%s\nIf these suggestions look correct, upgrade your configuration with the following command:\n    terraform 0.13upgrade", providerSuggestions),
+				detail,
 			))
 		}
 
@@ -673,6 +704,16 @@ func (c *InitCommand) getProviders(config *configs.Config, state *states.State, 
 	}
 
 	return true, diags
+}
+
+func (c *InitCommand) addProviderModuleDirs(reqs map[addrs.Provider][]string, node *configs.ModuleRequirements) {
+	for fqn := range node.Requirements {
+		reqs[fqn] = append(reqs[fqn], node.Module.SourceDir)
+	}
+
+	for _, child := range node.Children {
+		c.addProviderModuleDirs(reqs, child)
+	}
 }
 
 // backendConfigOverrideBody interprets the raw values of -backend-config
