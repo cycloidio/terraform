@@ -120,7 +120,7 @@ func (diags Diagnostics) HasErrors() bool {
 func (diags Diagnostics) ForRPC() Diagnostics {
 	ret := make(Diagnostics, len(diags))
 	for i := range diags {
-		ret[i] = makeRPCFriendlyDiag(diags[i])
+		ret[i] = makeRPCFriendlyDiagTF(diags[i])
 	}
 	return ret
 }
