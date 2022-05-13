@@ -8,11 +8,11 @@ import (
 	"github.com/zclconf/go-cty/cty"
 	ctyjson "github.com/zclconf/go-cty/cty/json"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/lang/marks"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/states/statefile"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/lang/marks"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/states/statefile"
+	"github.com/cycloidio/terraform/terraform"
 )
 
 // FormatVersion represents the version of the json format and will be

@@ -3,8 +3,8 @@ package etcd
 import (
 	"context"
 
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/legacy/helper/schema"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/legacy/helper/schema"
 	etcdv3 "go.etcd.io/etcd/clientv3"
 	"go.etcd.io/etcd/pkg/transport"
 )

@@ -9,13 +9,13 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/google/go-cmp/cmp"
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/lang/marks"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/providers"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/lang/marks"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/providers"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/tfdiags"
 	"github.com/zclconf/go-cty/cty"
 )
 
@@ -2094,7 +2094,7 @@ func TestContext2Plan_moduleExpandOrphansResourceInstance(t *testing.T) {
 	// registrations in the instance expander that might lead to panics
 	// if we aren't careful.
 	//
-	// (For some history here, see https://github.com/hashicorp/terraform/issues/30110 )
+	// (For some history here, see https://github.com/cycloidio/terraform/issues/30110 )
 
 	addrNoKey := mustResourceInstanceAddr("module.child.test_object.a[0]")
 	addrZeroKey := mustResourceInstanceAddr("module.child[0].test_object.a[0]")

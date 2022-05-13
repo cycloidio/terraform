@@ -5,10 +5,10 @@ import (
 	"log"
 	"sync"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/providers"
-	"github.com/hashicorp/terraform/provisioners"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/providers"
+	"github.com/cycloidio/terraform/provisioners"
 )
 
 // contextPlugins represents a library of available plugins (providers and

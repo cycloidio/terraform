@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/getproviders"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/getproviders"
+	"github.com/cycloidio/terraform/tfdiags"
 	"github.com/xlab/treeprint"
 )
 

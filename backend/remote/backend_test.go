@@ -10,12 +10,12 @@ import (
 	tfe "github.com/hashicorp/go-tfe"
 	version "github.com/hashicorp/go-version"
 	"github.com/hashicorp/terraform-svchost/disco"
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/tfdiags"
-	tfversion "github.com/hashicorp/terraform/version"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/tfdiags"
+	tfversion "github.com/cycloidio/terraform/version"
 	"github.com/zclconf/go-cty/cty"
 
-	backendLocal "github.com/hashicorp/terraform/backend/local"
+	backendLocal "github.com/cycloidio/terraform/backend/local"
 )
 
 func TestRemote(t *testing.T) {

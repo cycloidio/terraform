@@ -9,11 +9,11 @@ import (
 	tfe "github.com/hashicorp/go-tfe"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/states/statemgr"
-	"github.com/hashicorp/terraform/terraform"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/states/statemgr"
+	"github.com/cycloidio/terraform/terraform"
+	"github.com/cycloidio/terraform/tfdiags"
 	"github.com/zclconf/go-cty/cty"
 )
 

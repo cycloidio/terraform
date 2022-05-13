@@ -6,10 +6,10 @@ import (
 	"sort"
 
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/dag"
-	"github.com/hashicorp/terraform/lang"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/dag"
+	"github.com/cycloidio/terraform/lang"
 )
 
 // GraphNodeReferenceable must be implemented by any node that represents

@@ -6,11 +6,11 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/hashicorp/terraform/communicator/shared"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/plugin/convert"
-	"github.com/hashicorp/terraform/provisioners"
-	"github.com/hashicorp/terraform/tfplugin5"
+	"github.com/cycloidio/terraform/communicator/shared"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/plugin/convert"
+	"github.com/cycloidio/terraform/provisioners"
+	"github.com/cycloidio/terraform/tfplugin5"
 )
 
 // New wraps a provisioners.Interface to implement a grpc ProviderServer.

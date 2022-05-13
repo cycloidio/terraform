@@ -6,13 +6,13 @@ import (
 
 	"github.com/zclconf/go-cty/cty"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/providers"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/states/statemgr"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/providers"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/states/statemgr"
+	"github.com/cycloidio/terraform/terraform"
 )
 
 // TestLocal returns a configured Local struct with temporary paths and

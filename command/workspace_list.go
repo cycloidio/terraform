@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/tfdiags"
 	"github.com/posener/complete"
 )
 

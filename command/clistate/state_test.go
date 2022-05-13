@@ -3,10 +3,10 @@ package clistate
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/command/arguments"
-	"github.com/hashicorp/terraform/command/views"
-	"github.com/hashicorp/terraform/states/statemgr"
-	"github.com/hashicorp/terraform/terminal"
+	"github.com/cycloidio/terraform/command/arguments"
+	"github.com/cycloidio/terraform/command/views"
+	"github.com/cycloidio/terraform/states/statemgr"
+	"github.com/cycloidio/terraform/terminal"
 )
 
 func TestUnlock(t *testing.T) {

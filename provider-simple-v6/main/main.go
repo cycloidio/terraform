@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/hashicorp/terraform/grpcwrap"
-	plugin "github.com/hashicorp/terraform/plugin6"
-	simple "github.com/hashicorp/terraform/provider-simple-v6"
-	"github.com/hashicorp/terraform/tfplugin6"
+	"github.com/cycloidio/terraform/grpcwrap"
+	plugin "github.com/cycloidio/terraform/plugin6"
+	simple "github.com/cycloidio/terraform/provider-simple-v6"
+	"github.com/cycloidio/terraform/tfplugin6"
 )
 
 func main() {

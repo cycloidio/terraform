@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/tfdiags"
 	"github.com/zclconf/go-cty/cty"
 )
 

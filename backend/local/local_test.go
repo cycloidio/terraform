@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	_ "github.com/hashicorp/terraform/logging"
+	_ "github.com/cycloidio/terraform/logging"
 )
 
 func TestMain(m *testing.M) {

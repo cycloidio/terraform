@@ -5,10 +5,10 @@ import (
 
 	"github.com/hashicorp/hcl/v2"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/lang"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/lang"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 // validateSelfRef checks to ensure that expressions within a particular

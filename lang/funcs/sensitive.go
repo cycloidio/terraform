@@ -1,7 +1,7 @@
 package funcs
 
 import (
-	"github.com/hashicorp/terraform/lang/marks"
+	"github.com/cycloidio/terraform/lang/marks"
 	"github.com/zclconf/go-cty/cty"
 	"github.com/zclconf/go-cty/cty/function"
 )

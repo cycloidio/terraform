@@ -3,9 +3,9 @@ package providers
 import (
 	"github.com/zclconf/go-cty/cty"
 
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 // Interface represents the set of methods required for a complete resource

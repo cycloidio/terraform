@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/hashicorp/terraform/configs/configload"
-	"github.com/hashicorp/terraform/depsfile"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/states/statefile"
+	"github.com/cycloidio/terraform/configs/configload"
+	"github.com/cycloidio/terraform/depsfile"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/states/statefile"
 )
 
 type CreateArgs struct {

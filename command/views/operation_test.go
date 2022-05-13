@@ -6,13 +6,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/command/arguments"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/states/statefile"
-	"github.com/hashicorp/terraform/terminal"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/command/arguments"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/states/statefile"
+	"github.com/cycloidio/terraform/terminal"
+	"github.com/cycloidio/terraform/terraform"
 	"github.com/zclconf/go-cty/cty"
 )
 

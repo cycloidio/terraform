@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/providers"
-	proto "github.com/hashicorp/terraform/tfplugin6"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/providers"
+	proto "github.com/cycloidio/terraform/tfplugin6"
 	"github.com/zclconf/go-cty/cty"
 )
 

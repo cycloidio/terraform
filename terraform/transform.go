@@ -3,8 +3,8 @@ package terraform
 import (
 	"log"
 
-	"github.com/hashicorp/terraform/dag"
-	"github.com/hashicorp/terraform/logging"
+	"github.com/cycloidio/terraform/dag"
+	"github.com/cycloidio/terraform/logging"
 )
 
 // GraphTransformer is the interface that transformers implement. This

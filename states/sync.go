@@ -4,7 +4,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/hashicorp/terraform/addrs"
+	"github.com/cycloidio/terraform/addrs"
 	"github.com/zclconf/go-cty/cty"
 )
 

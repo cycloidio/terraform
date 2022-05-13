@@ -9,14 +9,14 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/zclconf/go-cty/cty"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/initwd"
-	"github.com/hashicorp/terraform/providers"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/initwd"
+	"github.com/cycloidio/terraform/providers"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/terraform"
 
-	_ "github.com/hashicorp/terraform/logging"
+	_ "github.com/cycloidio/terraform/logging"
 )
 
 func TestMain(m *testing.M) {

@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/hashicorp/terraform/addrs"
+	"github.com/cycloidio/terraform/addrs"
 	"github.com/zclconf/go-cty/cty"
 )
 

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/hashicorp/terraform/legacy/terraform"
+	"github.com/cycloidio/terraform/legacy/terraform"
 )
 
 func TestMultiLevelFieldReaderReadFieldExact(t *testing.T) {

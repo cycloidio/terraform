@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/lang/marks"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/states"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/lang/marks"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/states"
 	"github.com/zclconf/go-cty/cty"
 )
 

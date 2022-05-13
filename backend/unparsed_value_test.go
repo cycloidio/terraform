@@ -8,9 +8,9 @@ import (
 	"github.com/hashicorp/hcl/v2"
 	"github.com/zclconf/go-cty/cty"
 
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/terraform"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/terraform"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 func TestUnparsedValue(t *testing.T) {

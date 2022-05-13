@@ -6,8 +6,8 @@ import (
 	"fmt"
 
 	uuid "github.com/hashicorp/go-uuid"
-	"github.com/hashicorp/terraform/states/remote"
-	"github.com/hashicorp/terraform/states/statemgr"
+	"github.com/cycloidio/terraform/states/remote"
+	"github.com/cycloidio/terraform/states/statemgr"
 	_ "github.com/lib/pq"
 )
 

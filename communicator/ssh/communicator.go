@@ -19,13 +19,13 @@ import (
 	"time"
 
 	"github.com/apparentlymart/go-shquot/shquot"
-	"github.com/hashicorp/terraform/communicator/remote"
-	"github.com/hashicorp/terraform/provisioners"
+	"github.com/cycloidio/terraform/communicator/remote"
+	"github.com/cycloidio/terraform/provisioners"
 	"github.com/zclconf/go-cty/cty"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
 
-	_ "github.com/hashicorp/terraform/logging"
+	_ "github.com/cycloidio/terraform/logging"
 )
 
 const (

@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/command/arguments"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/terminal"
+	"github.com/cycloidio/terraform/command/arguments"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/terminal"
 	"github.com/zclconf/go-cty/cty"
 )
 

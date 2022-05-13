@@ -3,10 +3,10 @@ package refactoring
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 type MoveStatement struct {

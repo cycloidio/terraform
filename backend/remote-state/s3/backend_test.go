@@ -12,10 +12,10 @@ import (
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/s3"
 	awsbase "github.com/hashicorp/aws-sdk-go-base"
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/configs/hcl2shim"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/states/remote"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/configs/hcl2shim"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/states/remote"
 )
 
 var (

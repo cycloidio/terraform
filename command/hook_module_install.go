@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	version "github.com/hashicorp/go-version"
-	"github.com/hashicorp/terraform/initwd"
+	"github.com/cycloidio/terraform/initwd"
 	"github.com/mitchellh/cli"
 )
 

@@ -10,8 +10,8 @@ import (
 	"github.com/apparentlymart/go-versions/versions"
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/getproviders"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/getproviders"
 )
 
 func TestInstallPackage(t *testing.T) {

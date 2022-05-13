@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform/lang"
-	"github.com/hashicorp/terraform/lang/marks"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/lang"
+	"github.com/cycloidio/terraform/lang/marks"
+	"github.com/cycloidio/terraform/tfdiags"
 	"github.com/zclconf/go-cty/cty"
 )
 

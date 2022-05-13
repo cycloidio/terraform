@@ -12,15 +12,15 @@ import (
 	"github.com/zclconf/go-cty/cty"
 	"github.com/zclconf/go-cty/cty/convert"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/instances"
-	"github.com/hashicorp/terraform/lang"
-	"github.com/hashicorp/terraform/lang/marks"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/instances"
+	"github.com/cycloidio/terraform/lang"
+	"github.com/cycloidio/terraform/lang/marks"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 // Evaluator provides the necessary contextual data for evaluating expressions

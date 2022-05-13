@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/command/arguments"
-	"github.com/hashicorp/terraform/command/format"
-	"github.com/hashicorp/terraform/command/views/json"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/states/statefile"
-	"github.com/hashicorp/terraform/terraform"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/command/arguments"
+	"github.com/cycloidio/terraform/command/format"
+	"github.com/cycloidio/terraform/command/views/json"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/states/statefile"
+	"github.com/cycloidio/terraform/terraform"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 type Operation interface {

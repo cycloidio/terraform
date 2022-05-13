@@ -3,10 +3,10 @@ package terraform
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/instances"
-	"github.com/hashicorp/terraform/states"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/instances"
+	"github.com/cycloidio/terraform/states"
 )
 
 func TestNodeApplyableResourceExecute(t *testing.T) {

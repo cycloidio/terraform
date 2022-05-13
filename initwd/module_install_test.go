@@ -16,14 +16,14 @@ import (
 	"github.com/google/go-cmp/cmp"
 	version "github.com/hashicorp/go-version"
 	svchost "github.com/hashicorp/terraform-svchost"
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/configs/configload"
-	"github.com/hashicorp/terraform/copy"
-	"github.com/hashicorp/terraform/registry"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/configs/configload"
+	"github.com/cycloidio/terraform/copy"
+	"github.com/cycloidio/terraform/registry"
+	"github.com/cycloidio/terraform/tfdiags"
 
-	_ "github.com/hashicorp/terraform/logging"
+	_ "github.com/cycloidio/terraform/logging"
 )
 
 func TestMain(m *testing.M) {

@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/hashicorp/terraform/command/views"
-	"github.com/hashicorp/terraform/terminal"
+	"github.com/cycloidio/terraform/command/views"
+	"github.com/cycloidio/terraform/terminal"
 )
 
 // These are the main tests for the "terraform test" command.

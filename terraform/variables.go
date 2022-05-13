@@ -7,8 +7,8 @@ import (
 	"github.com/zclconf/go-cty/cty"
 	"github.com/zclconf/go-cty/cty/convert"
 
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 // InputValue represents a value for a variable in the root module, provided

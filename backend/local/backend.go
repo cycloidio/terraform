@@ -11,13 +11,13 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/command/views"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/logging"
-	"github.com/hashicorp/terraform/states/statemgr"
-	"github.com/hashicorp/terraform/terraform"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/command/views"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/logging"
+	"github.com/cycloidio/terraform/states/statemgr"
+	"github.com/cycloidio/terraform/terraform"
+	"github.com/cycloidio/terraform/tfdiags"
 	"github.com/zclconf/go-cty/cty"
 )
 

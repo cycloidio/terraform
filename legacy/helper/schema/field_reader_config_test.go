@@ -6,9 +6,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform/configs/hcl2shim"
-	"github.com/hashicorp/terraform/legacy/helper/hashcode"
-	"github.com/hashicorp/terraform/legacy/terraform"
+	"github.com/cycloidio/terraform/configs/hcl2shim"
+	"github.com/cycloidio/terraform/legacy/helper/hashcode"
+	"github.com/cycloidio/terraform/legacy/terraform"
 )
 
 func TestConfigFieldReader_impl(t *testing.T) {

@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/backend/remote-state/inmem"
-	"github.com/hashicorp/terraform/states"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/backend/remote-state/inmem"
+	"github.com/cycloidio/terraform/states"
 	"github.com/mitchellh/cli"
 )
 

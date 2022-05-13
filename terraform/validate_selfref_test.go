@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hashicorp/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/configs/configschema"
 
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hcltest"
-	"github.com/hashicorp/terraform/addrs"
+	"github.com/cycloidio/terraform/addrs"
 	"github.com/zclconf/go-cty/cty"
 )
 

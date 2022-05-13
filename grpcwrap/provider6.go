@@ -3,9 +3,9 @@ package grpcwrap
 import (
 	"context"
 
-	"github.com/hashicorp/terraform/plugin6/convert"
-	"github.com/hashicorp/terraform/providers"
-	"github.com/hashicorp/terraform/tfplugin6"
+	"github.com/cycloidio/terraform/plugin6/convert"
+	"github.com/cycloidio/terraform/providers"
+	"github.com/cycloidio/terraform/tfplugin6"
 	"github.com/zclconf/go-cty/cty"
 	ctyjson "github.com/zclconf/go-cty/cty/json"
 	"github.com/zclconf/go-cty/cty/msgpack"

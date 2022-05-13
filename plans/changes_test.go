@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/lang/marks"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/lang/marks"
 	"github.com/zclconf/go-cty/cty"
 )
 

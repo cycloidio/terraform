@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 
 	"github.com/hashicorp/terraform-svchost/disco"
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/registry"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/registry"
 	"github.com/spf13/afero"
 )
 

@@ -40,7 +40,7 @@ func (g *getterCommon) Context() context.Context {
 }
 
 // gitGetter is a temporary fork of getter.GitGetter to allow us to tactically
-// fix https://github.com/hashicorp/terraform/issues/30119 only within
+// fix https://github.com/cycloidio/terraform/issues/30119 only within
 // Terraform.
 //
 // This should be only a brief workaround to help us decouple work on the

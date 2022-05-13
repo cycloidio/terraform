@@ -7,11 +7,11 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/hashicorp/terraform/command/arguments"
-	"github.com/hashicorp/terraform/command/format"
-	"github.com/hashicorp/terraform/moduletest"
-	"github.com/hashicorp/terraform/terminal"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/command/arguments"
+	"github.com/cycloidio/terraform/command/format"
+	"github.com/cycloidio/terraform/moduletest"
+	"github.com/cycloidio/terraform/terminal"
+	"github.com/cycloidio/terraform/tfdiags"
 	"github.com/mitchellh/colorstring"
 )
 

@@ -20,16 +20,16 @@ import (
 	"github.com/mitchellh/cli"
 	"github.com/zclconf/go-cty/cty"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/command/views"
-	"github.com/hashicorp/terraform/configs/configschema"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/providers"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/states/statemgr"
-	"github.com/hashicorp/terraform/terraform"
-	"github.com/hashicorp/terraform/tfdiags"
-	tfversion "github.com/hashicorp/terraform/version"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/command/views"
+	"github.com/cycloidio/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/providers"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/states/statemgr"
+	"github.com/cycloidio/terraform/terraform"
+	"github.com/cycloidio/terraform/tfdiags"
+	tfversion "github.com/cycloidio/terraform/version"
 )
 
 func TestApply(t *testing.T) {

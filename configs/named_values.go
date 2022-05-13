@@ -10,8 +10,8 @@ import (
 	"github.com/zclconf/go-cty/cty"
 	"github.com/zclconf/go-cty/cty/convert"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/typeexpr"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/typeexpr"
 )
 
 // A consistent detail message for all "not a valid identifier" diagnostics.

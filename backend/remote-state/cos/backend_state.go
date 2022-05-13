@@ -7,10 +7,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/states/remote"
-	"github.com/hashicorp/terraform/states/statemgr"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/states/remote"
+	"github.com/cycloidio/terraform/states/statemgr"
 )
 
 // Define file suffix

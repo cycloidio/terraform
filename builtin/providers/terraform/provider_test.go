@@ -1,7 +1,7 @@
 package terraform
 
 import (
-	backendInit "github.com/hashicorp/terraform/backend/init"
+	backendInit "github.com/cycloidio/terraform/backend/init"
 )
 
 func init() {

@@ -5,8 +5,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/hashicorp/terraform/configs/configschema"
-	proto "github.com/hashicorp/terraform/tfplugin6"
+	"github.com/cycloidio/terraform/configs/configschema"
+	proto "github.com/cycloidio/terraform/tfplugin6"
 	"github.com/zclconf/go-cty/cty"
 )
 

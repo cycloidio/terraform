@@ -1,7 +1,7 @@
 package moduletest
 
 import (
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 // Assertion is the description of a single test assertion, whether

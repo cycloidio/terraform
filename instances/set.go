@@ -1,7 +1,7 @@
 package instances
 
 import (
-	"github.com/hashicorp/terraform/addrs"
+	"github.com/cycloidio/terraform/addrs"
 )
 
 // Set is a set of instances, intended mainly for the return value of

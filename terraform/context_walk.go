@@ -3,12 +3,12 @@ package terraform
 import (
 	"log"
 
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/instances"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/refactoring"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/instances"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/refactoring"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 // graphWalkOpts captures some transient values we use (and possibly mutate)

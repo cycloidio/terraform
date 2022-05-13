@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/e2e"
-	"github.com/hashicorp/terraform/getproviders"
+	"github.com/cycloidio/terraform/e2e"
+	"github.com/cycloidio/terraform/getproviders"
 )
 
 // TestProviderTampering tests various ways that the provider plugins in the

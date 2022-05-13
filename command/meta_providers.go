@@ -11,16 +11,16 @@ import (
 
 	plugin "github.com/hashicorp/go-plugin"
 
-	"github.com/hashicorp/terraform/addrs"
-	terraformProvider "github.com/hashicorp/terraform/builtin/providers/terraform"
-	"github.com/hashicorp/terraform/getproviders"
-	"github.com/hashicorp/terraform/logging"
-	"github.com/hashicorp/terraform/moduletest"
-	tfplugin "github.com/hashicorp/terraform/plugin"
-	tfplugin6 "github.com/hashicorp/terraform/plugin6"
-	"github.com/hashicorp/terraform/providercache"
-	"github.com/hashicorp/terraform/providers"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/addrs"
+	terraformProvider "github.com/cycloidio/terraform/builtin/providers/terraform"
+	"github.com/cycloidio/terraform/getproviders"
+	"github.com/cycloidio/terraform/logging"
+	"github.com/cycloidio/terraform/moduletest"
+	tfplugin "github.com/cycloidio/terraform/plugin"
+	tfplugin6 "github.com/cycloidio/terraform/plugin6"
+	"github.com/cycloidio/terraform/providercache"
+	"github.com/cycloidio/terraform/providers"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 // The TF_DISABLE_PLUGIN_TLS environment variable is intended only for use by

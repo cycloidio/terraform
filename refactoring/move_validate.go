@@ -6,11 +6,11 @@ import (
 	"strings"
 
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/dag"
-	"github.com/hashicorp/terraform/instances"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/dag"
+	"github.com/cycloidio/terraform/instances"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 // ValidateMoves tests whether all of the given move statements comply with

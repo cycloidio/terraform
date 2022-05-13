@@ -1,7 +1,7 @@
 package terraform
 
 import (
-	"github.com/hashicorp/terraform/provisioners"
+	"github.com/cycloidio/terraform/provisioners"
 )
 
 // simpleMockProvisioner returns a MockProvisioner that is pre-configured

@@ -8,10 +8,10 @@ import (
 
 	"github.com/apparentlymart/go-versions/versions"
 
-	"github.com/hashicorp/terraform/addrs"
-	copydir "github.com/hashicorp/terraform/copy"
-	"github.com/hashicorp/terraform/depsfile"
-	"github.com/hashicorp/terraform/getproviders"
+	"github.com/cycloidio/terraform/addrs"
+	copydir "github.com/cycloidio/terraform/copy"
+	"github.com/cycloidio/terraform/depsfile"
+	"github.com/cycloidio/terraform/getproviders"
 )
 
 // Installer is the main type in this package, representing a provider installer

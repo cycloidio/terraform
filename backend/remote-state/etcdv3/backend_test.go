@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/terraform/backend"
+	"github.com/cycloidio/terraform/backend"
 	etcdv3 "go.etcd.io/etcd/clientv3"
 )
 

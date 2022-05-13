@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/command/arguments"
-	"github.com/hashicorp/terraform/moduletest"
-	"github.com/hashicorp/terraform/terminal"
+	"github.com/cycloidio/terraform/command/arguments"
+	"github.com/cycloidio/terraform/moduletest"
+	"github.com/cycloidio/terraform/terminal"
 )
 
 func TestTest(t *testing.T) {

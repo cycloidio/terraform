@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hashicorp/terraform/e2e"
+	"github.com/cycloidio/terraform/e2e"
 )
 
 func TestTerraformProviderRead(t *testing.T) {

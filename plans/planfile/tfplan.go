@@ -7,12 +7,12 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/lang/marks"
-	"github.com/hashicorp/terraform/plans"
-	"github.com/hashicorp/terraform/plans/internal/planproto"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/version"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/lang/marks"
+	"github.com/cycloidio/terraform/plans"
+	"github.com/cycloidio/terraform/plans/internal/planproto"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/version"
 	"github.com/zclconf/go-cty/cty"
 )
 

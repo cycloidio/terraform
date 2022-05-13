@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/legacy/terraform"
+	"github.com/cycloidio/terraform/legacy/terraform"
 	"github.com/mitchellh/mapstructure"
 )
 

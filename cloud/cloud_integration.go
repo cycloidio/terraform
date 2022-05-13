@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/hashicorp/go-tfe"
-	"github.com/hashicorp/terraform/backend"
+	"github.com/cycloidio/terraform/backend"
 	"github.com/mitchellh/cli"
 )
 

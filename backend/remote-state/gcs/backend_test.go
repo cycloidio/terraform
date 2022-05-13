@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"cloud.google.com/go/storage"
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/states/remote"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/states/remote"
 )
 
 const (

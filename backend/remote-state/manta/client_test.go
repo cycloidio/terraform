@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/states/remote"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/states/remote"
 )
 
 func TestRemoteClient_impl(t *testing.T) {

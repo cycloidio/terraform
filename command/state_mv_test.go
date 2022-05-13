@@ -10,8 +10,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/mitchellh/cli"
 
-	"github.com/hashicorp/terraform/addrs"
-	"github.com/hashicorp/terraform/states"
+	"github.com/cycloidio/terraform/addrs"
+	"github.com/cycloidio/terraform/states"
 )
 
 func TestStateMv(t *testing.T) {
@@ -1622,7 +1622,7 @@ func TestStateMv_fromBackendToLocal(t *testing.T) {
 
 // This test covers moving the only resource in a module to a new address in
 // that module, which triggers the maybePruneModule functionality. This caused
-// a panic report: https://github.com/hashicorp/terraform/issues/25520
+// a panic report: https://github.com/cycloidio/terraform/issues/25520
 func TestStateMv_onlyResourceInModule(t *testing.T) {
 	state := states.BuildState(func(s *states.SyncState) {
 		s.SetResourceInstanceCurrent(

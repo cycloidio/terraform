@@ -11,7 +11,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/hashicorp/terraform/repl"
+	"github.com/cycloidio/terraform/repl"
 
 	"github.com/chzyer/readline"
 	"github.com/mitchellh/cli"

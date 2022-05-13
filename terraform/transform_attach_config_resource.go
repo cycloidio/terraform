@@ -3,8 +3,8 @@ package terraform
 import (
 	"log"
 
-	"github.com/hashicorp/terraform/configs"
-	"github.com/hashicorp/terraform/dag"
+	"github.com/cycloidio/terraform/configs"
+	"github.com/cycloidio/terraform/dag"
 )
 
 // GraphNodeAttachResourceConfig is an interface that must be implemented by nodes

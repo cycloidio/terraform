@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/hashicorp/terraform/e2e"
-	"github.com/hashicorp/terraform/plans"
+	"github.com/cycloidio/terraform/e2e"
+	"github.com/cycloidio/terraform/plans"
 	"github.com/zclconf/go-cty/cty"
 )
 

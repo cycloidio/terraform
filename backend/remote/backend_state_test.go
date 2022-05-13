@@ -5,11 +5,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/cloud"
-	"github.com/hashicorp/terraform/states"
-	"github.com/hashicorp/terraform/states/remote"
-	"github.com/hashicorp/terraform/states/statefile"
+	"github.com/cycloidio/terraform/backend"
+	"github.com/cycloidio/terraform/cloud"
+	"github.com/cycloidio/terraform/states"
+	"github.com/cycloidio/terraform/states/remote"
+	"github.com/cycloidio/terraform/states/statefile"
 )
 
 func TestRemoteClient_impl(t *testing.T) {

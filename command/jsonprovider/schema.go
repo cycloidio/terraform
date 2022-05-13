@@ -1,7 +1,7 @@
 package jsonprovider
 
 import (
-	"github.com/hashicorp/terraform/configs/configschema"
+	"github.com/cycloidio/terraform/configs/configschema"
 )
 
 type schema struct {

@@ -16,7 +16,7 @@ import (
 	"time"
 
 	tfe "github.com/hashicorp/go-tfe"
-	tfversion "github.com/hashicorp/terraform/version"
+	tfversion "github.com/cycloidio/terraform/version"
 	"github.com/mitchellh/copystructure"
 )
 

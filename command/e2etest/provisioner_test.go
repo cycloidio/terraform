@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/e2e"
+	"github.com/cycloidio/terraform/e2e"
 )
 
 // TestProviderDevOverrides is a test that terraform can execute a 3rd party

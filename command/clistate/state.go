@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hashicorp/terraform/command/views"
-	"github.com/hashicorp/terraform/helper/slowmessage"
-	"github.com/hashicorp/terraform/states/statemgr"
-	"github.com/hashicorp/terraform/tfdiags"
+	"github.com/cycloidio/terraform/command/views"
+	"github.com/cycloidio/terraform/helper/slowmessage"
+	"github.com/cycloidio/terraform/states/statemgr"
+	"github.com/cycloidio/terraform/tfdiags"
 )
 
 const (
