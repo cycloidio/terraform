@@ -7,7 +7,7 @@ description: >-
 
 # remote
 
--> **Note:** The remote backend was introduced in Terraform v0.11.13 and Terraform Enterprise v201809-1. As of Terraform v1.1.0 and Terraform Enterprise v202201-1, **we recommend using the Terraform Cloud's built-in [`cloud` integration](/language/settings/terraform-cloud)** instead of this backend. The `cloud` option includes an improved user experience and more features.
+-> **Note:** We introduced the remote backend in Terraform v0.11.13 and Terraform Enterprise v201809-1. As of Terraform v1.1.0 and Terraform Enterprise v202201-1, **we recommend using the Terraform Cloud's built-in [`cloud` integration](/cli/cloud/settings)** instead of this backend. The `cloud` option includes an improved user experience and more features.
 
 The remote backend is unique among all other Terraform backends because it can both store state snapshots and execute operations for Terraform Cloud's [CLI-driven run workflow](/cloud-docs/run/cli). It used to be called an "enhanced" backend.
 
@@ -18,7 +18,7 @@ You can also use Terraform Cloud with local operations, in which case only state
 
 ## Command Support
 
-Currently the remote backend supports the following Terraform commands:
+The remote backend supports the following Terraform commands:
 
 - `apply`
 - `console` (supported in Terraform >= v0.11.12)
@@ -173,7 +173,9 @@ data "terraform_remote_state" "foo" {
 }
 ```
 
-## Configuration variables
+## Configuration Variables
+
+!> **Warning:**  We recommend using environment variables to supply credentials and other sensitive data. If you use `-backend-config` or hardcode these values directly in your configuration, Terraform will include these values in both the `.terraform` subdirectory and in plan files. Refer to [Credentials and Sensitive Data](/language/settings/backends/configuration#credentials-and-sensitive-data) for details.
 
 The following configuration options are supported:
 

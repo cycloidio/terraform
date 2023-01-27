@@ -8,10 +8,10 @@ description: >-
 
 # References to Named Values
 
-> **Hands-on:** Try the [Create Dynamic Expressions](https://learn.hashicorp.com/tutorials/terraform/expressions?in=terraform/configuration-language&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorial on HashiCorp Learn.
+> **Hands-on:** Try the [Create Dynamic Expressions](https://learn.hashicorp.com/tutorials/terraform/expressions?in=terraform/configuration-language&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorial.
 
 Terraform makes several kinds of named values available. Each of these names is
-an expression that references the associated value; you can use them as
+an expression that references the associated value. You can use them as
 standalone expressions, or combine them with other expressions to compute new
 values.
 
@@ -118,14 +118,22 @@ to mark the reference as for a data resource.
 
 ### Filesystem and Workspace Info
 
-* `path.module` is the filesystem path of the module where the expression
-  is placed.
-* `path.root` is the filesystem path of the root module of the configuration.
-* `path.cwd` is the filesystem path of the current working directory. In
-  normal use of Terraform this is the same as `path.root`, but some advanced
-  uses of Terraform run it from a directory other than the root module
-  directory, causing these paths to be different.
-* `terraform.workspace` is the name of the currently selected
+The following values are available:
+
+- `path.module` is the filesystem path of the module where the expression is placed.
+  We do not recommend using `path.module` in write operations because it can produce
+  different behavior depending on whether you use remote or local module sources.
+  Multiple invocations of local modules use the same source directory, overwriting
+  the data in `path.module` during each call. This can lead to race conditions and
+  unexpected results.
+- `path.root` is the filesystem path of the root module of the configuration.
+- `path.cwd` is the filesystem path of the original working directory from where you
+  ran Terraform before applying any `-chdir` argument. This path is an absolute path
+  that includes details about the filesystem structure. It is also useful in some
+  advanced cases where Terraform is run from a directory other than the root module
+  directory. We recommend using `path.root` or `path.module` over `path.cwd` where
+  possible.
+- `terraform.workspace` is the name of the currently selected
   [workspace](/language/state/workspaces).
 
 Use the values in this section carefully, because they include information
@@ -284,7 +292,7 @@ Note that unlike `count`, splat expressions are _not_ directly applicable to res
 
 When defining the schema for a resource type, a provider developer can mark
 certain attributes as _sensitive_, in which case Terraform will show a
-placeholder marker `(sensitive)` instead of the actual value when rendering
+placeholder marker `(sensitive value)` instead of the actual value when rendering
 a plan involving that attribute.
 
 A provider attribute marked as sensitive behaves similarly to an
@@ -318,12 +326,10 @@ values are decided dynamically by the remote system. For example, if a
 particular remote object type is assigned a generated unique id on creation,
 Terraform cannot predict the value of this id until the object has been created.
 
-To allow expressions to still be evaluated during the plan phase, Terraform
-uses special "unknown value" placeholders for these results. In most cases you
-don't need to do anything special to deal with these, since the Terraform
-language automatically handles unknown values during expressions, so that
-for example adding a known value to an unknown value automatically produces
-an unknown value as the result.
+Terraform uses special unknown value placeholders for information that it
+cannot predict during the plan phase. The Terraform language automatically
+handles unknown values in expressions. For example, adding a known value to an
+unknown value automatically produces an unknown value as a result.
 
 However, there are some situations where unknown values _do_ have a significant
 effect:
@@ -349,4 +355,4 @@ effect:
   types where possible, but incorrect use of such values may not be detected
   until the apply phase, causing the apply to fail.
 
-Unknown values appear in the `terraform plan` output as `(not yet known)`.
+Unknown values appear in the `terraform plan` output as `(known after apply)`.

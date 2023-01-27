@@ -11,7 +11,7 @@ description: >-
 versions of Terraform did not track dependency selections at all, so the
 information here is not relevant to those versions.
 
-> **Hands-on:** Try the [Lock and Upgrade Provider Versions](https://learn.hashicorp.com/tutorials/terraform/provider-versioning?in=terraform/configuration-language&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorial on HashiCorp Learn.
+> **Hands-on:** Try the [Lock and Upgrade Provider Versions](https://learn.hashicorp.com/tutorials/terraform/provider-versioning?in=terraform/configuration-language&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorial.
 
 A Terraform configuration may refer to two different kinds of external
 dependency that come from outside of its own codebase:
@@ -366,9 +366,11 @@ this command.
 
 ### Providers that are no longer required
 
-If you remove the last dependency on a particular provider from your
-configuration, then `terraform init` will remove any existing lock file entry
-for that provider.
+To determine whether there still exists a dependency on a given provider,
+Terraform uses two sources of truth: the configuration itself, and the state.
+If you remove the last dependency on a particular provider from both your
+configuration and state, then `terraform init` will remove any existing lock
+file entry for that provider.
 
 ```diff
 --- .terraform.lock.hcl	2020-10-07 16:12:07.539570634 -0700

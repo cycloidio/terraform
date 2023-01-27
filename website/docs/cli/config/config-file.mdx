@@ -76,7 +76,7 @@ The following settings can be set in the CLI configuration file:
 
 ## Credentials
 
-[Terraform Cloud](/cloud) provides a number of remote network
+[Terraform Cloud](https://cloud.hashicorp.com/products/terraform) provides a number of remote network
 services for use with Terraform, and
 [Terraform Enterprise](/enterprise) allows hosting those
 services inside your own infrastructure. For example, these systems offer both
@@ -116,6 +116,8 @@ Terraform Cloud responds to API calls at both its current hostname
 `app.terraform.io`, and its historical hostname `atlas.hashicorp.com`.
 
 ### Environment Variable Credentials
+
+-> **Note:** Environment variable credentials are supported in Terraform v1.2.0 and later.
 
 If you would prefer not to store your API tokens directly in the CLI configuration, you may use
 a host-specific environment variable. Environment variable names should have the prefix
@@ -309,7 +311,7 @@ the operating system where you are running Terraform:
 
 If a `terraform.d/plugins` directory exists in the current working directory
 then Terraform will also include that directory, regardless of your operating
-system.
+system. This behavior changes when you use the `-chdir` option with the `init` command. In that case, Terraform checks for the `terraform.d/plugins` directory in the launch directory and not in the directory you specified with `-chdir`.
 
 Terraform will check each of the paths above to see if it exists, and if so
 treat it as a filesystem mirror. The directory structure inside each one must

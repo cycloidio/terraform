@@ -7,10 +7,10 @@ description: >-
 
 # Creating Modules
 
-> **Hands-on:** Try the [Reuse Configuration with Modules](https://learn.hashicorp.com/collections/terraform/modules?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) collection on HashiCorp Learn.
+> **Hands-on:** Try the [Reuse Configuration with Modules](https://learn.hashicorp.com/collections/terraform/modules?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorials.
 
 A _module_ is a container for multiple resources that are used together.
-Modules can be used to create lightweight abstractions, so that you can
+You can use modules to create lightweight abstractions, so that you can
 describe your infrastructure in terms of its architecture, rather than
 directly in terms of physical objects.
 
@@ -69,6 +69,12 @@ isn't the same as the main resource type inside it, that may be a sign that
 your module is not creating any new abstraction and so the module is
 adding unnecessary complexity. Just use the resource type directly in the
 calling module instead.
+
+### No-Code Provisioning in Terraform Cloud
+
+You can also create no-code ready modules to enable the no-code provisioning workflow in Terraform Cloud. No-code provisioning lets users deploy a module's resources in Terraform Cloud without writing any Terraform configuration.
+
+No-code ready modules have additional requirements and considerations. Refer to [Designing No-Code Ready Modules](/cloud-docs/no-code-provisioning/module-design) in the Terraform Cloud documentation for details.
 
 ## Refactoring module resources
 

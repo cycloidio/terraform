@@ -7,10 +7,10 @@ description: >-
 
 # Input Variables
 
-> **Hands-on:** Try the [Customize Terraform Configuration with Variables](https://learn.hashicorp.com/tutorials/terraform/variables?in=terraform/configuration-language&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorial on HashiCorp Learn.
+> **Hands-on:** Try the [Customize Terraform Configuration with Variables](https://learn.hashicorp.com/tutorials/terraform/variables?in=terraform/configuration-language&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorial.
 
 Input variables let you customize aspects of Terraform modules without altering
-the module's own source code. This allows you to share modules across different
+the module's own source code. This functionality allows you to share modules across different
 Terraform configurations, making your module composable and reusable.
 
 When you declare variables in the root module of your configuration, you can
@@ -181,7 +181,7 @@ Refer to [Custom Condition Checks](/language/expressions/custom-conditions#input
 
 -> This feature was introduced in Terraform v0.14.0.
 
-> **Hands-on:** Try the [Protect Sensitive Input Variables](https://learn.hashicorp.com/tutorials/terraform/sensitive-variables?in=terraform/configuration-language&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorial on HashiCorp Learn.
+> **Hands-on:** Try the [Protect Sensitive Input Variables](https://learn.hashicorp.com/tutorials/terraform/sensitive-variables?in=terraform/configuration-language&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) tutorial.
 
 Setting a variable as `sensitive` prevents Terraform from showing its value in
 the `plan` or `apply` output, when you use that variable elsewhere in your
@@ -194,7 +194,7 @@ values in cleartext. For more information, see
 
 Declare a variable as sensitive by setting the `sensitive` argument to `true`:
 
-```
+```hcl
 variable "user_information" {
   type = object({
     name    = string
@@ -218,8 +218,8 @@ Terraform will perform the following actions:
 
   # some_resource.a will be created
   + resource "some_resource" "a" {
-      + name    = (sensitive)
-      + address = (sensitive)
+      + name    = (sensitive value)
+      + address = (sensitive value)
     }
 
 Plan: 1 to add, 0 to change, 0 to destroy.
@@ -262,7 +262,7 @@ If a resource attribute is used as, or part of, the provider-defined resource id
   + resource "random_pet" "animal" {
       + id        = (known after apply)
       + length    = 2
-      + prefix    = (sensitive)
+      + prefix    = (sensitive value)
       + separator = "-"
     }
 
@@ -283,7 +283,7 @@ random_pet.animal: Creation complete after 0s [id=jae-known-mongoose]
 The `nullable` argument in a variable block controls whether the module caller
 may assign the value `null` to the variable.
 
-```
+```hcl
 variable "example" {
   type     = string
   nullable = false
@@ -478,7 +478,7 @@ variable "moose" {
 And the following `.tfvars` file:
 
 ```hcl
-moose = "Moose"
+mosse = "Moose"
 ```
 
 Will cause Terraform to warn you that there is no variable declared `"mosse"`, which can help

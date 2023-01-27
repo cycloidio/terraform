@@ -96,7 +96,7 @@ jobs:
       # it for select packages.
       - name: "Race detector"
         run: |
-          go test -race ./internal/terraform ./internal/command
+          go test -race ./internal/terraform ./internal/command ./internal/states
 
   e2e-tests:
     # This is an intentionally-limited form of our E2E test run which only
@@ -141,6 +141,8 @@ jobs:
     steps:
       - name: "Fetch source code"
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # We need to do comparisons against the main branch.
 
       - name: Determine Go version
         id: go
@@ -180,7 +182,7 @@ jobs:
 
       - name: "Code consistency checks"
         run: |
-          make fmtcheck generate staticcheck exhaustive protobuf
+          make fmtcheck importscheck generate staticcheck exhaustive protobuf
           if [[ -n "$(git status --porcelain)" ]]; then
             echo >&2 "ERROR: Generated files are inconsistent. Run 'make generate' and 'make protobuf' locally and then commit the updated files."
             git >&2 status --porcelain
