@@ -195,10 +195,12 @@ func setupBinary() func() {
 		fmt.Printf("Could not change directories: %v\n", err)
 		os.Exit(1)
 	}
-	// Getting top level dir
+	// Getting top level dir. cycloid fork: the package lives at
+	// <repo>/cloud/e2e (one level shallower than upstream's
+	// <repo>/internal/cloud/e2e), so drop two path components, not three.
 	dirPaths := strings.Split(currentDir, "/")
 	log.Println(currentDir)
-	topLevel := len(dirPaths) - 3
+	topLevel := len(dirPaths) - 2
 	topDir := strings.Join(dirPaths[0:topLevel], "/")
 
 	if err := os.Chdir(topDir); err != nil {
