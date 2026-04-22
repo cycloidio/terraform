@@ -62,10 +62,20 @@ fi
 
 # ---- 2. git mv internal/<D> <D> for every direct subdir of internal/ --------
 
+moved_names=()
 for d in internal/*/; do
 	name="$(basename "$d")"
 	git mv "internal/$name" "$name"
+	moved_names+=("$name")
 done
+
+# Build a '|'-separated regex alternation of moved directory names, used by
+# Step 6 to rewrite bare filesystem references like "internal/command/..."
+# in CI workflows without touching unrelated occurrences of the word.
+OLD_IFS=$IFS
+IFS='|'
+MOVED_PATTERN="${moved_names[*]}"
+IFS=$OLD_IFS
 
 # internal/ should now be empty. If it isn't (stray files upstream forgot to
 # gitignore), leave it untouched so the operator can inspect.
@@ -113,6 +123,32 @@ find . \
 		[ "$modfile" = "./go.mod" ] && continue
 		perl -i -pe 's{^(replace github\.com/hashicorp/terraform => )\.\./}{$1}' "$modfile"
 	done
+
+# ---- 6. rewrite filesystem 'internal/' paths in CI workflows and scripts ----
+#
+# Shell commands inside GitHub Actions workflows and our own shell scripts
+# reference './internal/<pkg>' or bare 'internal/<pkg>' as relative paths.
+# Those paths no longer exist, so CI jobs and helper scripts would break.
+# Two sub-rewrites are applied:
+#
+#   (a) './internal/'          -> './'         -- relative-prefix form
+#   (b) '<sep>internal/<M>/'   -> '<sep><M>/'  -- bare form, where <M> is a
+#       directory we just moved. <sep> is start-of-line or any non-alnum,
+#       non-slash, non-underscore char, so unrelated tokens like
+#       'company-internal/foo' are left alone.
+
+if [ -n "$MOVED_PATTERN" ]; then
+	find . \
+		-path ./.git -prune -o \
+		-path ./vendor -prune -o \
+		-path ./node_modules -prune -o \
+		\( -name '*.yml' -o -name '*.yaml' -o -name '*.sh' \) \
+		-type f -print0 \
+		| xargs -0 perl -i -pe "
+			s{\\./internal/}{./}g;
+			s{(^|[^A-Za-z0-9/_])internal/($MOVED_PATTERN)(/|\$|\\s)}{\${1}\${2}\${3}}g;
+		"
+fi
 
 # ---- done --------------------------------------------------------------------
 
