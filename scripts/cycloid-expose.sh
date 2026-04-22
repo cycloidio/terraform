@@ -110,6 +110,7 @@ find . \
 	-path ./.git -prune -o \
 	-path ./vendor -prune -o \
 	-path ./node_modules -prune -o \
+	-path ./scripts/cycloid-expose.sh -prune -o \
 	\( -name '*.go' -o -name '*.proto' -o -name '*.mod' -o -name '*.sh' -o -name '*.md' \) \
 	-type f -print0 \
 	| xargs -0 perl -i -pe 's{github\.com/hashicorp/terraform/internal/}{github.com/hashicorp/terraform/}g'
@@ -160,6 +161,7 @@ if [ -n "$MOVED_PATTERN" ]; then
 		-path ./.git -prune -o \
 		-path ./vendor -prune -o \
 		-path ./node_modules -prune -o \
+		-path ./scripts/cycloid-expose.sh -prune -o \
 		\( -name '*.yml' -o -name '*.yaml' -o -name '*.sh' \) \
 		-type f -print0 \
 		| xargs -0 perl -i -pe "
