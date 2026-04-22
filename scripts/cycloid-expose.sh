@@ -168,6 +168,43 @@ if [ -n "$MOVED_PATTERN" ]; then
 		"
 fi
 
+# ---- 7. heal symlinks whose target escaped internal/ via ../.. --------------
+#
+# Symlinks like internal/tfplugin6/tfplugin6.proto -> ../../docs/... carried
+# two '../' levels because they lived two directories deep. After the move
+# they live one level deep, so the same target overshoots the repo root.
+# For any symlink that no longer resolves, try dropping one leading '../'
+# from the target and apply the fix if it now resolves.
+
+find . -path ./.git -prune -o -type l -print 2>/dev/null | while IFS= read -r link; do
+	target="$(readlink -- "$link")"
+	case "$target" in
+		/*) continue ;;                       # absolute target, not affected
+		../*) ;;
+		*) continue ;;                        # sibling/relative targets are fine
+	esac
+	[ -e "$link" ] && continue                # already resolves, leave alone
+	new_target="${target#../}"
+	link_dir="$(dirname -- "$link")"
+	if [ -e "$link_dir/$new_target" ]; then
+		rm -- "$link"
+		ln -s -- "$new_target" "$link"
+		git add -- "$link"
+	fi
+done
+
+# ---- 8. drop stale 'internal/' prefixes from copywrite ignore globs ----------
+#
+# The root .copywrite.hcl's header_ignore list used to say
+#   "internal/tfplugin*/**"
+# to delegate those directories to their own copywrite configs. After the
+# move the directories live at tfplugin*/, so strip the 'internal/' prefix
+# inside quoted strings. Narrow rewrite: only touches strings that open
+# with "internal/, so unrelated text is left alone.
+
+find . -path ./.git -prune -o -name '.copywrite.hcl' -type f -print0 \
+	| xargs -0 perl -i -pe 's{"internal/}{"}g'
+
 # ---- done --------------------------------------------------------------------
 
 cat <<'EOF'

@@ -16,6 +16,8 @@ project {
     ".changes/**",
     # these directories have their own copywrite config
     "docs/plugin-protocol/**",
-    "internal/tfplugin*/**"
+    "tfplugin*/**",
+    # cycloid-owned tooling, not subject to the HashiCorp BUSL header
+    "scripts/cycloid-expose.sh"
   ]
 }
