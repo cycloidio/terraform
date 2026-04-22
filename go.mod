@@ -37,16 +37,16 @@ require (
 	github.com/hashicorp/jsonapi v1.3.2
 	github.com/hashicorp/terraform-registry-address v0.3.0
 	github.com/hashicorp/terraform-svchost v0.1.1
-	github.com/hashicorp/terraform/internal/backend/remote-state/azure v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/backend/remote-state/consul v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/backend/remote-state/cos v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/backend/remote-state/gcs v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/backend/remote-state/kubernetes v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/backend/remote-state/oci v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/backend/remote-state/oss v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/backend/remote-state/pg v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/backend/remote-state/s3 v0.0.0-00010101000000-000000000000
-	github.com/hashicorp/terraform/internal/legacy v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/azure v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/consul v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/cos v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/gcs v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/kubernetes v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/oci v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/oss v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/pg v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/backend/remote-state/s3 v0.0.0-00010101000000-000000000000
+	github.com/hashicorp/terraform/legacy v0.0.0-00010101000000-000000000000
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
 	github.com/masterzen/winrm v0.0.0-20200615185753-c42b5136ff88
 	github.com/mattn/go-isatty v0.0.20
@@ -301,25 +301,25 @@ require (
 // these modules as a separate unit. (But please add to this only as a last
 // resort!)
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/azure => ./internal/backend/remote-state/azure
+replace github.com/hashicorp/terraform/backend/remote-state/azure => ./backend/remote-state/azure
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/consul => ./internal/backend/remote-state/consul
+replace github.com/hashicorp/terraform/backend/remote-state/consul => ./backend/remote-state/consul
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/cos => ./internal/backend/remote-state/cos
+replace github.com/hashicorp/terraform/backend/remote-state/cos => ./backend/remote-state/cos
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/gcs => ./internal/backend/remote-state/gcs
+replace github.com/hashicorp/terraform/backend/remote-state/gcs => ./backend/remote-state/gcs
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/kubernetes => ./internal/backend/remote-state/kubernetes
+replace github.com/hashicorp/terraform/backend/remote-state/kubernetes => ./backend/remote-state/kubernetes
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/oss => ./internal/backend/remote-state/oss
+replace github.com/hashicorp/terraform/backend/remote-state/oss => ./backend/remote-state/oss
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/pg => ./internal/backend/remote-state/pg
+replace github.com/hashicorp/terraform/backend/remote-state/pg => ./backend/remote-state/pg
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/s3 => ./internal/backend/remote-state/s3
+replace github.com/hashicorp/terraform/backend/remote-state/s3 => ./backend/remote-state/s3
 
-replace github.com/hashicorp/terraform/internal/backend/remote-state/oci => ./internal/backend/remote-state/oci
+replace github.com/hashicorp/terraform/backend/remote-state/oci => ./backend/remote-state/oci
 
-replace github.com/hashicorp/terraform/internal/legacy => ./internal/legacy
+replace github.com/hashicorp/terraform/legacy => ./legacy
 
 tool (
 	github.com/hashicorp/copywrite

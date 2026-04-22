@@ -19,7 +19,7 @@
 // branch or any other development branch.
 //
 syntax = "proto3";
-option go_package = "github.com/hashicorp/terraform/internal/tfplugin6";
+option go_package = "github.com/hashicorp/terraform/tfplugin6";
 
 import "google/protobuf/timestamp.proto";
 

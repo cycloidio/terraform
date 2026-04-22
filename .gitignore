@@ -16,7 +16,6 @@ modules-dev/
 
 go.work*
 
-/terraform
 
 vendor/
 
