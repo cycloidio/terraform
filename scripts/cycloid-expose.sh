@@ -61,12 +61,30 @@ if grep -qxF '/terraform' .gitignore; then
 fi
 
 # ---- 2. git mv internal/<D> <D> for every direct subdir of internal/ --------
+#
+# Capture the set of tracked-but-ignored files under internal/ first. These
+# are files upstream keeps in git despite matching a .gitignore pattern
+# (e.g. *.exe testdata). `git mv` silently drops them from the index when
+# the destination also matches the ignore rule, so we re-force-add them
+# at their new locations after the moves.
+
+tracked_ignored_pre=()
+while IFS= read -r f; do
+	[ -n "$f" ] && tracked_ignored_pre+=("$f")
+done < <(git ls-files -ci --exclude-standard -- 'internal/*' 2>/dev/null)
 
 moved_names=()
 for d in internal/*/; do
 	name="$(basename "$d")"
 	git mv "internal/$name" "$name"
 	moved_names+=("$name")
+done
+
+# Re-add any tracked-but-ignored file that survived on disk but fell out of
+# the index at its new path.
+for f in "${tracked_ignored_pre[@]}"; do
+	new="${f#internal/}"
+	[ -f "$new" ] && git add -f -- "$new"
 done
 
 # Build a '|'-separated regex alternation of moved directory names, used by
